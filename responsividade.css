@@ -1,0 +1,17 @@
+
+@media screen and (max-width: 1366px) {
+  
+    body{
+        background-size: 1600px 900px;
+    }
+  
+    .containerLogin{
+    position: relative;
+    top: -25px;
+  }
+
+  .logo {
+    position: relative;
+    top: -10px;
+  }
+}

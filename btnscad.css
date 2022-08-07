@@ -1,0 +1,70 @@
+span{
+  position: relative;
+  display: inline-flex;
+  width: 260px;
+  height: 60px;
+  margin: 0 8px;
+  perspective: 1000px;
+}
+span a{
+  font-size: 20px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform .25s;
+}
+span a:before,
+span a:after{
+  position: absolute;
+  content: "Criar conta";
+  width: 260px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: transparent;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+span a:before{
+  color: white;
+  background: 	#FF7518;
+  transform: rotateY(0deg) translateZ(25px);
+}
+span a:after{
+  color: 	#FF7518;
+  background-color: white;
+  transform: rotateX(90deg) translateZ(25px);
+}
+span a:hover{
+  transform: translateZ(-25px) rotateX(-90deg);
+}
+
+b {
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 500;
+  color: #FF7518;
+  overflow: hidden;
+}
+
+b {
+  background: linear-gradient(to right, darkorange, 	#FF7518 50%, white 50%);
+}
+
+b {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+}
+
+b {
+  transition: background-position 275ms ease;
+}
+b:hover {
+  background-position: 0 100%;
+}
+

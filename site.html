@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel='stylesheet' type='text/css' media='screen' href='site.css'>
+</head>
+<body>
+<div class="container">
+ <div class="nav">
+    <ul>
+        <li>
+            <a href="#">
+              <span class="icon"><ion-icon name="newspaper-outline"></ion-icon></span>
+              <span class="tittle">Colégio Santo Antônio</span>
+            </a>
+        </li>
+        <li>
+            <a onclick="home()">
+              <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+              <span class="tittle">Início</span>
+            </a>
+        </li>
+        <li>
+          <a onclick="notas()">
+            <span class="icon" onclick="notas()"><ion-icon name="school-outline"></ion-icon></span>
+            <span class="tittle">Notas e faltas</span>
+          </a>
+      </li>
+        <li>
+            <a onclick="finceiro()">
+              <span class="icon"><ion-icon name="cash-outline"></ion-icon></span>
+              <span class="tittle">Financeiro</span>
+            </a>
+        </li>
+        <li>
+            <a onclick="local()">
+              <span class="icon"><ion-icon name="location-outline"></ion-icon></span>
+              <span class="tittle">Localização</span>
+            </a>
+        </li>
+        <li>
+            <a onclick="sair()">
+              <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+              <span class="tittle">Sair</span>
+            </a>
+        </li>
+    </ul>
+ </div>
+</div>
+
+<div class="main">
+    
+    <div class="topbar">
+       
+        <div class="toggle">
+            <ion-icon name="menu-outline"></ion-icon>
+        </div>
+         
+        <div class="user">
+            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" width="100" height="100">
+         </div>
+    </div>
+
+    <div class="quadro">
+
+      <center>
+      <h2>Notas por Bimestre</h2>
+      </center>
+       
+      <div class="containersBi">
+
+       <div class="containerLabels">
+         
+        <h2>1º Bimestre</h2>
+  
+        <div class="labels">
+        <label for="nota1" id="lnota1">Nota 1</label>
+        <input type="text" id="nota1" required="required">
+  
+        <label for="nota2" id="lnota2">Nota 2</label>
+        <input type="text" id="nota2" required="required">
+  
+        <label for="nota3" id="lnota3">Nota 3</label>
+        <input type="text" id="nota3" required="required">
+  
+        <label for="nota4" id="lnota4">Nota 4</label>
+        <input type="text" id="nota4" required="required">
+
+        <div class="containerCdnota">
+
+          <span class="button" onclick="cadastroNota1()">Cadastrar</span>
+  
+        </div>
+
+        </div>
+
+       </div>
+  
+      <div class="containerLabels2">
+        
+        <h2>2º Bimestre</h2>
+  
+        <div class="labels">
+        <label for="nota1" id="lnota1c2">Nota 1</label>
+        <input type="text" id="nota1c2" required="required">
+  
+        <label for="nota2" id="lnota2c2">Nota 2</label>
+        <input type="text" id="nota2c2" required="required">
+  
+        <label for="nota3" id="lnota3c2">Nota 3</label>
+        <input type="text" id="nota3c2" required="required">
+  
+        <label for="nota4" id="lnota4c2">Nota 4</label>
+        <input type="text" id="nota4c2" required="required">
+
+        <div class="containerCdnota">
+
+          <span class="button" onclick="cadastroNota2()">Cadastrar</span>
+  
+        </div>
+
+        </div>
+
+      </div>
+  
+      <div class="containerLabels3">
+        
+        <h2>3º Bimestre</h2>
+  
+        <div class="labels">
+        <label for="nota1" id="lnota1c3">Nota 1</label>
+        <input type="text" id="nota1c3" required="required">
+  
+        <label for="nota2" id="lnota2c3">Nota 2</label>
+        <input type="text" id="nota2c3" required="required">
+  
+        <label for="nota3" id="lnota3c3">Nota 3</label>
+        <input type="text" id="nota3c3" required="required">
+  
+        <label for="nota4" id="lnota4c3">Nota 4</label>
+        <input type="text" id="nota4c3" required="required">
+
+        <div class="containerCdnota">
+
+          <span class="button" onclick="cadastroNota3()">Cadastrar</span>
+  
+        </div>
+
+        </div>
+
+      </div>
+  
+      <div class="containerLabels4">
+        
+        <h2>4º Bimestre</h2>
+  
+        <div class="labels">
+        <label for="nota1" id="lnota1c4">Nota 1</label>
+        <input type="text" id="nota1c4" required="required">
+  
+        <label for="nota2" id="lnota2c4">Nota 2</label>
+        <input type="text" id="nota2c4" required="required">
+  
+        <label for="nota3" id="lnota3c4">Nota 3</label>
+        <input type="text" id="nota3c4" required="required">
+  
+        <label for="nota4" id="lnota4c4">Nota 4</label>
+        <input type="text" id="nota4c4" required="required">
+
+        <div class="containerCdnota">
+
+          <span class="button" onclick="cadastroNota4()">Cadastrar</span>
+  
+        </div>
+
+        </div>
+
+       </div>
+
+      </div>
+      
+      <center>
+
+      <div class="result">
+
+       <div class="labelsRs">
+
+        <div class="labelsR1">
+
+          <h3>1º Bimestre</h3>
+         
+         <label for="lname" id="lprova1r1">Prova 01 :</label>
+         <input type="text" class="labelsize" id="prova1r1" name="lname" disabled><br><br>
+
+         <label for="lname" id="lprova2r1">Prova 02 :</label>
+         <input type="text" class="labelsize" id="prova2r1" name="lname" disabled><br><br>
+
+         <label for="lname" id="lprova3r1">Prova 03 :</label>
+         <input type="text" class="labelsize" id="prova3r1" name="lname" disabled><br><br>
+
+         <label for="lname" id="lprova4r1">Prova 04 :</label>
+         <input type="text" class="labelsize" id="prova4r1" name="lname" disabled><br><br>
+
+         <label for="lname" id="lmedia1">Média do Bimestre :</label>
+         <input type="text" class="labelsize" id="media1" name="lname" disabled><br><br>
+         
+        </div>
+
+        <div class="labelsR2">
+
+          <h3>2º Bimestre</h3>
+         
+         <label for="lname" id="lprova1r2">Prova 01 :</label>
+         <input type="text" class="labelsize" id="prova1r2" name="lname" disabled><br><br>
+
+         <label for="lname" id="lprova2r2">Prova 02 :</label>
+         <input type="text" class="labelsize" id="prova2r2" name="lname" disabled><br><br>
+
+         <label for="lname" id="lprova3r2">Prova 03 :</label>
+         <input type="text" class="labelsize" id="prova3r2" name="lname" disabled><br><br>
+
+         <label for="lname" id="lprova4r2">Prova 04 :</label>
+         <input type="text" class="labelsize" id="prova4r2" name="lname" disabled><br><br>
+
+         <label for="lname" id="lmedia2">Média do Bimestre :</label>
+         <input type="text" class="labelsize" id="media2" name="lname" disabled><br><br>
+         
+        </div>
+
+        <div class="labelsR3">
+
+          <h3>3º Bimestre</h3>
+         
+         <label for="lname" id="lprova1r3">Prova 01 :</label>
+         <input type="text" class="labelsize" id="prova1r3" name="lname" disabled><br><br>
+
+         <label for="lname" id="lprova2r3">Prova 02 :</label>
+         <input type="text" class="labelsize" id="prova2r3" name="lname" disabled><br><br>
+
+         <label for="lname" id="lprova3r3">Prova 03 :</label>
+         <input type="text" class="labelsize" id="prova3r3" name="lname" disabled><br><br>
+
+         <label for="lname" id="lprova4r3">Prova 04 :</label>
+         <input type="text" class="labelsize" id="prova4r3" name="lname" disabled><br><br>
+
+         <label for="lname" id="lmedia3">Média do Bimestre :</label>
+         <input type="text" class="labelsize" id="media3" name="lname" disabled><br><br>
+         
+        </div>
+
+        <div class="labelsR4">
+
+          <h3>4º Bimestre</h3>
+         
+         <label for="lname" id="lprova1r4">Prova 01 :</label>
+         <input type="text" class="labelsize" id="prova1r4" name="lname" disabled><br><br>
+
+         <label for="lname" id="lprova2r4">Prova 02 :</label>
+         <input type="text" class="labelsize" id="prova2r4" name="lname" disabled><br><br>
+
+         <label for="lname" id="lprova3r4">Prova 03 :</label>
+         <input type="text" class="labelsize" id="prova3r4" name="lname" disabled><br><br>
+
+         <label for="lname" id="lprova4r4">Prova 04 :</label>
+         <input type="text" class="labelsize" id="prova4r4" name="lname" disabled><br><br>
+
+         <label for="lname" id="lmedia4">Média do Bimestre :</label>
+         <input type="text" class="labelsize" id="media4" name="lname" disabled><br><br>
+         
+        </div>
+       
+       </div>
+
+      </div>
+
+      </center>
+    
+    </div>
+
+</div>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="login.js"></script>
+<script src="logout.js"></script>
+<script src="site.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+:root
+{
+    --orange: #FF7518;
+    --white: #fff;
+    --grey: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+    --blue: #287bff;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+h2 {
+    position: relative;
+    top: 10px;
+    font-weight: 401;
+}
+
+h3 {
+    font-weight: 401;
+    font-size: 17px;
+}
+
+input {
+    text-align: center;
+}
+
+.container  {
+    position: relative;
+    width: 100%;
+}
+
+.nav {
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background: var(--orange);
+    border-left: 10px solid var(--orange);
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.nav.active {
+    width: 80px;
+}
+
+.nav ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.nav ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.nav ul li:hover,
+.nav ul li.hovered {
+    background: var(--blue);
+}
+
+.nav ul li:nth-child(1) {
+    margin-bottom: 40px;
+    pointer-events: none;
+}
+
+.nav ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.nav ul li:hover a,
+.nav ul li.hovered a {
+    color: var(--white);
+}
+
+.nav ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+}
+
+.nav ul li a .icon ion-icon {
+    font-size: 1.75em;
+}
+
+.nav ul li a .tittle {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+/*curvas de fora*/
+
+.nav ul li:hover a::before,
+.nav ul li.hovered a::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px var(--blue);
+    pointer-events: none;
+}
+
+.nav ul li:hover a::after,
+.nav ul li.hovered a::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0 10px var(--blue);
+    pointer-events: none;
+}
+
+.main {
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background: var(--blue);
+    transition: 0.5s;
+    background-color: #287bff;
+}
+
+.main.active {
+    width: calc(100% - 80px);
+    left: 80px;
+}
+
+.topbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    background-color: var(--black2);
+}
+
+.toggle {
+    position: relative;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    cursor: pointer;
+}
+
+.user {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.user img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.quadro {
+    background-color: white;
+    width: 1340px;
+    height: 840px;
+    display: flex;
+    align-items: left;
+    position: relative;
+    top: 45px;
+    left: 85px;
+    border-radius: 20px;
+    display: none;
+}
+
+.quadro.active {
+    width: calc(1340px + 220px);
+}
+
+.containerLabels {
+  width: 270px;
+  height: 345px;
+  background-color: var(--orange);
+  position: relative;
+  left: 50px;
+  top: 50px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.containerLabels2 {
+    width: 270px;
+    height: 345px;
+    background-color: var(--orange);
+    position: relative;
+    left: 50px;
+    top: 50px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .containerLabels3 {
+    width: 270px;
+    height: 345px;
+    background-color: var(--orange);
+    position: relative;
+    left: 50px;
+    top: 50px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .containerLabels4 {
+    width: 270px;
+    height: 345px;
+    background-color: var(--orange);
+    position: relative;
+    left: 50px;
+    top: 50px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+
+.labels {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 80px 70px;
+    position: relative;
+    bottom: 60px;  
+}
+
+.containersBi {
+    display: flex;
+    flex-direction: row;
+    gap: 53px;
+    position: relative;
+    bottom: 17px;
+}
+
+.containersBi.active {
+    display: flex;
+    flex-direction: row;
+    gap: 125px;
+}
+
+.options {
+    text-align: right;
+    position: relative;
+    right: 53px;
+}
+
+.result {
+    width: 1240px;
+    height: 330px;
+    background-color: var(--orange);
+    position: relative;
+    top: 77px;
+    border-radius: 10px;
+}
+
+.result.active {
+    width: 1450px;
+}
+
+.labelsR1 {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    position: relative;
+    left: 3.5px;
+}
+
+.labelsR2 {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.labelsR3 {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.labelsR4 {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.labelsize {
+    width: 60px;
+    height: 20px;
+    background-color: #f5f5f5;
+    position: relative;
+    top: 2px;
+}
+
+.labelsRs {
+    position: relative;
+    left: 50px;
+    top: 55px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.labelsR1.active {
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+    position: relative;
+    left: 3.5px;
+}
+
+.labelsR2.active {
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+}
+
+.labelsR3.active {
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+}
+
+.labelsR4.active {
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+}
+
+#nota1 {
+    height: 25px;
+    font-size: 15px;
+}
+
+#nota2 {
+    height: 25px;
+    font-size: 15px;
+}
+
+#nota3 {
+    height: 25px;
+    font-size: 15px;
+}
+
+#nota4 {
+    height: 25px;
+    font-size: 15px;
+}
+
+/*bimestre 2 */
+
+#nota1c2 {
+    height: 25px;
+    font-size: 15px;
+}
+
+#nota2c2 {
+    height: 25px;
+    font-size: 15px;
+}
+
+#nota3c2 {
+    height: 25px;
+    font-size: 15px;
+}
+
+#nota4c2 {
+    height: 25px;
+    font-size: 15px;
+}
+
+/*bimestre 3 */
+
+#nota1c3 {
+    height: 25px;
+    font-size: 15px;
+}
+
+#nota2c3 {
+    height: 25px;
+    font-size: 15px;
+}
+
+#nota3c3 {
+    height: 25px;
+    font-size: 15px;
+}
+
+#nota4c3 {
+    height: 25px;
+    font-size: 15px;
+}
+
+/*bimestre 4 */
+
+#nota1c4 {
+    height: 25px;
+    font-size: 15px;
+}
+
+#nota2c4 {
+    height: 25px;
+    font-size: 15px;
+}
+
+#nota3c4 {
+    height: 25px;
+    font-size: 15px;
+}
+
+#nota4c4 {
+    height: 25px;
+    font-size: 15px;
+}
+
+.containerCdnota {
+    width: 130px;
+    height: 28px;
+    background-color: var(--blue);
+    border-radius: 2px;
+    position: relative;
+    top: 12px;
+    border: 1px solid black;
+    cursor: pointer;
+}
